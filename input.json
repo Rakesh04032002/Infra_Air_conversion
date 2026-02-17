@@ -1,0 +1,44 @@
+{
+  "project": "DataPipelineX",
+  "version": "1.0",
+  "metadata": {
+    "owner": "team_abc",
+    "created": "2026-02-17"
+  },
+  "jobs": [
+    {
+      "name": "job_alpha",
+      "script": "abd/new_abduf/khalg/kjahgkhalkj/job.ksh",
+      "batch": "abd/new_abduf/khalg/kjahgkhalkj/job.btq",
+      "extra": "some random text here"
+    },
+    {
+      "name": "job_beta",
+      "paths": [
+        "/opt/apps/data/process/run_MAIN.KSH",
+        "C:\\enterprise\\batch\\LOAD_DATA.Btq",
+        "not_a_script.txt"
+      ]
+    },
+    {
+      "name": "job_gamma",
+      "details": {
+        "command": "sh abd/new_abduf/khalg/kjahgkhalkj/secondary_job.KSH --env prod",
+        "dependency": "trigger file at ./relative/path/trigger.btq"
+      }
+    }
+  ],
+  "misc": [
+    "random_string",
+    "this contains abd/new_abduf/khalg/kjahgkhalkj3/job.ksh inside text",
+    {
+      "nested_array": [
+        "deep/path/inside/system/execute_this.btq",
+        {
+          "deepest_level": "another/path/test_job.Ksh"
+        }
+      ]
+    }
+  ],
+  "notes": "Backup located at backup/scripts/ARCHIVE_JOB.btq and logs in logs/run_log.txt"
+}

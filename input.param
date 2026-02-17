@@ -1,0 +1,31 @@
+# ==========================
+# PARAM FILE - PRODUCTION
+# ==========================
+
+ENV=PROD
+BASE_PATH=/abd/new_abduf/khalg/kjahgkhalkj/
+
+MAIN_SCRIPT=abd/new_abduf/khalg/kjahgkhalkj/job.ksh
+MAIN_BATCH=abd/new_abduf/khalg/kjahgkhalkj/job.btq
+
+# Random messy entries
+RUN_CMD=sh /opt/apps/data/process/run_MAIN.KSH --mode full
+BATCH_TRIGGER=C:\enterprise\batch\LOAD_DATA.Btq
+
+echo "Executing ./relative/path/trigger.btq"
+
+DEPENDENCY_LIST=(
+    abd/new_abduf/khalg/kjahgkhalkj/secondary_job.KSH
+    deep/path/inside/system/execute_this.btq
+    another/path/test_job.Ksh
+)
+
+# Duplicate and mixed case entries
+duplicate_script=ABD/NEW_ABDUF/KHALG/KJAHGKHALKJ/JOB.KSH
+duplicate_batch=abd/new_abduf/khalg/kjahgkhalkj/JOB.BTQ
+
+# Noise data
+TEMP_FILE=data/output/result.csv
+LOG_FILE=logs/system.log
+
+random_text="This text references backup/scripts/ARCHIVE_JOB.btq for restore"
